@@ -1,6 +1,6 @@
 # Docs https://opentelemetry.io/docs/collector/extend/ocb/#containerize-your-collector-distribution
 
-FROM otel/opentelemetry-collector-builder:0.149.0 AS builder
+FROM otel/opentelemetry-collector-builder:0.148.0 AS builder
 
 COPY ./builder-config.yml /build/builder-config.yaml
 
