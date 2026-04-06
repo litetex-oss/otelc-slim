@@ -6,12 +6,10 @@ on:
     branches: [ master ]
     paths-ignore: 
       - '**.md'
-      - '.github/**'
   pull_request:
     branches: [ master ]
     paths-ignore: 
       - '**.md'
-      - '.github/**'
 
 jobs:
   docker-build:
@@ -56,7 +54,7 @@ jobs:
           tags: ghcr.io/wg-easy/wg-easy
           cache-from: type=gha,scope=build-${{ env.PLATFORM_PAIR }}
           cache-to: type=gha,mode=max,scope=build-${{ env.PLATFORM_PAIR }}
-          outputs: type=image,compression=zstd,force-compression=true,push-by-digest=true,name-canonical=true
+          outputs: type=image,compression=zstd,push-by-digest=true,name-canonical=true
 
       - name: Export digest
         run: |
