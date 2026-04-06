@@ -115,11 +115,9 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/otelc-slim
             ghcr.io/${{ github.repository }}
           tags: |
-            type=schedule,pattern={{date 'YYYYMMDD'}}
             type=semver,pattern={{version}},value=${{ steps.version.outputs.version }}
             type=semver,pattern={{major}}.{{minor}},value=${{ steps.version.outputs.version }}
             type=semver,pattern={{major}},value=${{ steps.version.outputs.version }}
-            latest
 
       - name: Create manifest list and push
         working-directory: ${{ runner.temp }}/digests
