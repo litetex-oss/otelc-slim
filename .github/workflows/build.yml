@@ -4,12 +4,12 @@ on:
   workflow_dispatch:
   push:
     branches: [ master ]
-    paths-ignore: 
-      - '**.md'
+    paths: 
+      - 'build/**'
   pull_request:
     branches: [ master ]
-    paths-ignore: 
-      - '**.md'
+    paths: 
+      - 'build/**'
 
 jobs:
   docker-build:
