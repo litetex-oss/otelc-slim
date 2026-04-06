@@ -3,5 +3,17 @@
   "rebaseWhen": "behind-base-branch",
   "ocb": {
     "managerFilePatterns": ["/build/builder-config.yml$/"]
-  }
+  },
+  "packageRules": [
+    {
+      "description": "Group go.opentelemetry.io/collector/confmap/provider",
+      "matchPackagePatterns": [
+        "^go.opentelemetry.io/collector/confmap/provider"
+      ],
+      "datasources": [
+        "ocb"
+      ],
+      "groupName": "go.opentelemetry.io/collector/confmap/provider"
+    }
+  ]
 }
