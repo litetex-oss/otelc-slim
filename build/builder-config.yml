@@ -37,9 +37,9 @@ connectors:
   - gomod: go.opentelemetry.io/collector/connector/forwardconnector v0.149.0
 
 providers:
-  - gomod: go.opentelemetry.io/collector/confmap/provider/envprovider v1.54.0
-  - gomod: go.opentelemetry.io/collector/confmap/provider/fileprovider v1.54.0
-  - gomod: go.opentelemetry.io/collector/confmap/provider/yamlprovider v1.54.0
+  - gomod: go.opentelemetry.io/collector/confmap/provider/envprovider v1.55.0
+  - gomod: go.opentelemetry.io/collector/confmap/provider/fileprovider v1.55.0
+  - gomod: go.opentelemetry.io/collector/confmap/provider/yamlprovider v1.55.0
 
 replaces:
   # Replaced because of hard dependencies to kubernetes
