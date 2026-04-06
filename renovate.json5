@@ -6,14 +6,29 @@
   },
   "packageRules": [
     {
-      "description": "Group go.opentelemetry.io/collector/confmap/provider",
+      "description": "Group opentelemetry stable",
       "matchPackagePatterns": [
         "^go.opentelemetry.io/collector/confmap/provider"
       ],
       "datasources": [
         "go"
       ],
-      "groupName": "go.opentelemetry.io/collector/confmap/provider"
+      "groupName": "opentelemetry-stable"
+    },
+    {
+      "description": "Group opentelemetry development",
+      "matchPackagePatterns": [
+        "^go.opentelemetry.io/collector/extension",
+        "^go.opentelemetry.io/collector/exporter",
+        "^go.opentelemetry.io/collector/processor",
+        "^go.opentelemetry.io/collector/receiver",
+        "^go.opentelemetry.io/collector/connector",
+        "^github.com/open-telemetry/opentelemetry-collector-contrib"
+      ],
+      "datasources": [
+        "go"
+      ],
+      "groupName": "opentelemetry-development"
     }
   ]
 }
