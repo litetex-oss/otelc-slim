@@ -43,7 +43,7 @@ providers:
 
 replaces:
   # Replaced because of hard dependencies to kubernetes
-  - github.com/open-telemetry/opentelemetry-collector-contrib/receiver/prometheusreceiver => github.com/litetex-oss/opentelemetry-collector-contrib-slim/receiver/prometheusreceiver v0.148.0
+  - github.com/open-telemetry/opentelemetry-collector-contrib/receiver/prometheusreceiver => github.com/litetex-oss/opentelemetry-collector-contrib-slim/receiver/prometheusreceiver v0.149.0
   # Replaced because of hard dependencies to kubernetes / other service providers
   # Not so small alternative: "remove_all_sd" build flag
   - github.com/prometheus/prometheus => github.com/litetex-oss/prometheus-slim v0.310.0
