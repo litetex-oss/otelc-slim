@@ -51,7 +51,7 @@ jobs:
           context: ./build
           platforms: ${{ matrix.arch.platform }}
           labels: ${{ steps.meta.outputs.labels }}
-          tags: ghcr.io/wg-easy/wg-easy
+          tags: ghcr.io/${{ github.repository }}
           cache-from: type=gha,scope=build-${{ env.PLATFORM_PAIR }}
           cache-to: type=gha,mode=max,scope=build-${{ env.PLATFORM_PAIR }}
           outputs: type=image,compression=zstd,push-by-digest=true,name-canonical=true
