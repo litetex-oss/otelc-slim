@@ -15,7 +15,7 @@ ARG USER_UID=1000
 USER ${USER_UID}
 
 COPY ./collector-config.yml /otelcol/collector-config.yml
-COPY --chmod=755 --from=builder /home/ocb/output/otelcol-slim /otelcol-slim
+COPY --chmod=755 --from=builder /home/ocb/output/otelcol-slim /otelcol
 
 ENTRYPOINT ["/otelcol/otelcol-slim"]
 CMD ["--config", "/otelcol/collector-config.yml"]
