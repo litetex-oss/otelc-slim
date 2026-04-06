@@ -13,9 +13,7 @@
       "datasources": [
         "go"
       ],
-      "groupName": "opentelemetry-stable",
-      "fetchChangeLogs": "off",
-      "changelogUrl": "https://github.com/open-telemetry/opentelemetry-collector-contrib/releases"
+      "groupName": "opentelemetry-stable"
     },
     {
       "description": "Group opentelemetry development",
@@ -30,9 +28,29 @@
       "datasources": [
         "go"
       ],
-      "groupName": "opentelemetry-development",
+      "groupName": "opentelemetry-development"
+    },
+    {
+      "description": "Static changelogs for collector",
+      "matchPackagePatterns": [
+        "^go.opentelemetry.io/collector"
+      ],
+      "datasources": [
+        "go"
+      ],
       "fetchChangeLogs": "off",
       "changelogUrl": "https://github.com/open-telemetry/opentelemetry-collector/releases"
+    },
+    {
+      "description": "Static changelogs for collector-contrib",
+      "matchPackagePatterns": [
+        "^github.com/open-telemetry/opentelemetry-collector-contrib"
+      ],
+      "datasources": [
+        "go"
+      ],
+      "fetchChangeLogs": "off",
+      "changelogUrl": "https://github.com/open-telemetry/opentelemetry-collector-contrib/releases"
     }
   ]
 }
