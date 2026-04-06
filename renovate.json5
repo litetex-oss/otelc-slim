@@ -13,7 +13,9 @@
       "datasources": [
         "go"
       ],
-      "groupName": "opentelemetry-stable"
+      "groupName": "opentelemetry-stable",
+      "fetchChangeLogs": "off",
+      "changelogUrl": "https://github.com/open-telemetry/opentelemetry-collector-contrib/releases"
     },
     {
       "description": "Group opentelemetry development",
@@ -28,7 +30,9 @@
       "datasources": [
         "go"
       ],
-      "groupName": "opentelemetry-development"
+      "groupName": "opentelemetry-development",
+      "fetchChangeLogs": "off",
+      "changelogUrl": "https://github.com/open-telemetry/opentelemetry-collector/releases"
     }
   ]
 }
