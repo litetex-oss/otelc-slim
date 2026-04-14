@@ -8,33 +8,33 @@ dist:
   output_path: ./output
 
 extensions:
-  - gomod: go.opentelemetry.io/collector/extension/zpagesextension v0.149.0
-  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/basicauthextension v0.149.0
-  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/pprofextension v0.149.0
-  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/storage/filestorage v0.149.0
+  - gomod: go.opentelemetry.io/collector/extension/zpagesextension v0.150.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/basicauthextension v0.150.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/pprofextension v0.150.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/storage/filestorage v0.150.0
 
 exporters:
-  - gomod: go.opentelemetry.io/collector/exporter/debugexporter v0.149.0
-  - gomod: go.opentelemetry.io/collector/exporter/nopexporter v0.149.0
-  - gomod: go.opentelemetry.io/collector/exporter/otlpexporter v0.149.0
-  - gomod: go.opentelemetry.io/collector/exporter/otlphttpexporter v0.149.0
+  - gomod: go.opentelemetry.io/collector/exporter/debugexporter v0.150.0
+  - gomod: go.opentelemetry.io/collector/exporter/nopexporter v0.150.0
+  - gomod: go.opentelemetry.io/collector/exporter/otlpexporter v0.150.0
+  - gomod: go.opentelemetry.io/collector/exporter/otlphttpexporter v0.150.0
 
 processors:
-  - gomod: go.opentelemetry.io/collector/processor/batchprocessor v0.149.0
-  - gomod: go.opentelemetry.io/collector/processor/memorylimiterprocessor v0.149.0
+  - gomod: go.opentelemetry.io/collector/processor/batchprocessor v0.150.0
+  - gomod: go.opentelemetry.io/collector/processor/memorylimiterprocessor v0.150.0
   # Use in favor of resourcedetectionprocessor because of https://github.com/open-telemetry/opentelemetry-collector-contrib/issues/47218
-  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor v0.149.0
-  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor v0.149.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor v0.150.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor v0.150.0
 
 receivers:
-  - gomod: go.opentelemetry.io/collector/receiver/nopreceiver v0.149.0
-  - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver v0.149.0
-  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/filelogreceiver v0.149.0
-  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/journaldreceiver v0.149.0
-  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/prometheusreceiver v0.149.0
+  - gomod: go.opentelemetry.io/collector/receiver/nopreceiver v0.150.0
+  - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver v0.150.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/filelogreceiver v0.150.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/journaldreceiver v0.150.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/prometheusreceiver v0.150.0
 
 connectors:
-  - gomod: go.opentelemetry.io/collector/connector/forwardconnector v0.149.0
+  - gomod: go.opentelemetry.io/collector/connector/forwardconnector v0.150.0
 
 providers:
   - gomod: go.opentelemetry.io/collector/confmap/provider/envprovider v1.55.0
