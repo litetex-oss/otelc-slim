@@ -1,6 +1,6 @@
 # Docs https://opentelemetry.io/docs/collector/extend/ocb/#containerize-your-collector-distribution
 
-FROM otel/opentelemetry-collector-builder:0.150.0 AS builder
+FROM otel/opentelemetry-collector-builder:0.149.0 AS builder
 
 # sum.golang.org is must be run by idiots because otherwise I can't explain 
 # how this server reguarily (2 occurences in less than 1 week!) fails to connect to GitHub
