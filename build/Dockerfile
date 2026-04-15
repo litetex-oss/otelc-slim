@@ -2,6 +2,24 @@
 
 FROM otel/opentelemetry-collector-builder:0.150.0 AS builder
 
+# sum.golang.org is must be run by idiots because otherwise I can't explain 
+# how this server reguarily (2 occurences in less than 1 week!) fails to connect to GitHub
+# or why this is the default
+# -> Disable this for my orga and contact GitHub directly
+#
+# Docs:
+# * https://go.dev/ref/mod#environment-variables
+# * https://go.dev/ref/mod#private-module-privacy
+ENV GONOSUMDB=github.com/litetex-oss/*
+
+USER root
+
+# Add git so when the go dep resolution fails it prints out a human understandable error 
+# and not "git is missing"
+RUN apk add --no-cache git
+
+USER ocb
+
 COPY ./builder-config.yml /build/builder-config.yaml
 
 RUN /usr/local/bin/ocb --config=/build/builder-config.yaml
