@@ -2,10 +2,10 @@
 
 FROM otel/opentelemetry-collector-builder:0.149.0 AS builder
 
-# sum.golang.org is must be run by idiots because otherwise I can't explain 
+# sum.golang.org must be run by idiots because otherwise I can't explain 
 # how this server reguarily (2 occurences in less than 1 week!) fails to connect to GitHub
-# or why this is the default
-# -> Disable this for my orga and contact GitHub directly
+# or why this it's the default design to contact a single point-of-failure server
+# -> Disable this for my orga and instead contact GitHub directly
 #
 # Docs:
 # * https://go.dev/ref/mod#environment-variables
