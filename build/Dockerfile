@@ -35,5 +35,10 @@ USER ${USER_UID}
 COPY ./collector-config.yml /otelcol/collector-config.yml
 COPY --chmod=755 --from=builder /home/ocb/output/otelcol-slim /otelcol
 
+# GRPC lookups will cause DNS requests to non-existing domains otherwise by default
+# See: https://pkg.go.dev/google.golang.org/grpc/internal/envconfig
+# Related: https://github.com/argoproj/argo-cd/issues/24991
+ENV GRPC_ENABLE_TXT_SERVICE_CONFIG=false
+
 ENTRYPOINT ["/otelcol/otelcol-slim"]
 CMD ["--config", "/otelcol/collector-config.yml"]
